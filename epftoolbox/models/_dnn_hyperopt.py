@@ -48,7 +48,7 @@ def _build_space(nlayer, data_augmentation, n_exogenous_inputs):
         'neurons1': hp.quniform('neurons1', 50, 500, 1),
         'activation': hp.choice('activation', ["relu", "softplus", "tanh", 'selu',
                                 'LeakyReLU', 'PReLU', 'sigmoid']),
-        'init': hp.choice('init', ['Orthogonal', 'lecun_uniform', 'glorot_uniform',
+        'init': hp.choice('init', ['orthogonal', 'lecun_uniform', 'glorot_uniform',
             'glorot_normal', 'he_uniform', 'he_normal']),
         'reg': hp.choice('reg', [
             {'val': None, 'lambda': 0},
